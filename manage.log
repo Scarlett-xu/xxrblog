@@ -1,0 +1,38 @@
+nohup: ignoring input
+Watching for file changes with StatReloader
+[07/Jul/2022 02:21:39] "GET / HTTP/1.1" 200 10697
+[07/Jul/2022 02:21:48] "GET / HTTP/1.1" 200 10697
+Not Found: /apple-touch-icon-precomposed.png
+[07/Jul/2022 02:21:48] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2178
+Not Found: /apple-touch-icon.png
+[07/Jul/2022 02:21:49] "GET /apple-touch-icon.png HTTP/1.1" 404 2142
+Not Found: /favicon.ico
+[07/Jul/2022 02:21:49] "GET /favicon.ico HTTP/1.1" 404 2115
+Not Found: /apple-touch-icon-precomposed.png
+[07/Jul/2022 02:21:49] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2178
+Not Found: /apple-touch-icon.png
+[07/Jul/2022 02:21:49] "GET /apple-touch-icon.png HTTP/1.1" 404 2142
+Not Found: /favicon.ico
+[07/Jul/2022 02:21:49] "GET /favicon.ico HTTP/1.1" 404 2115
+[07/Jul/2022 02:21:49] "GET / HTTP/1.1" 200 10697
+Not Found: /apple-touch-icon-precomposed.png
+[07/Jul/2022 02:21:49] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2178
+Not Found: /apple-touch-icon.png
+[07/Jul/2022 02:21:49] "GET /apple-touch-icon.png HTTP/1.1" 404 2142
+Not Found: /favicon.ico
+[07/Jul/2022 02:21:50] "GET /favicon.ico HTTP/1.1" 404 2115
+Not Found: /apple-touch-icon-precomposed.png
+[07/Jul/2022 02:21:50] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2178
+Not Found: /apple-touch-icon.png
+[07/Jul/2022 02:21:50] "GET /apple-touch-icon.png HTTP/1.1" 404 2142
+Not Found: /favicon.ico
+[07/Jul/2022 02:21:50] "GET /favicon.ico HTTP/1.1" 404 2115
+[07/Jul/2022 02:22:09] "GET / HTTP/1.1" 200 10697
+[07/Jul/2022 02:22:09] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[07/Jul/2022 02:22:10] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[07/Jul/2022 02:22:10] "GET /favicon.ico HTTP/1.1" 404 2115
+[07/Jul/2022 02:22:11] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[07/Jul/2022 02:22:14] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[07/Jul/2022 02:22:47] "GET / HTTP/1.1" 200 10697
+[07/Jul/2022 02:44:01] "GET / HTTP/1.1" 200 10697
