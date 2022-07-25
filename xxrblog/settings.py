@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,14 +31,18 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    # 'django_admin_bootstrapped', # bootstrap后台管理界面,这个必须放在最前面
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog.apps.BlogConfig',
+    'mdeditor',
+    
 ]
-
+X_FRAME_OPTIONS = 'SAMEORIGIN' 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -75,8 +79,12 @@ WSGI_APPLICATION = 'xxrblog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'xxrblog',  # 你的数据库名称
+        'USER': 'root',  # 你的数据库用户名
+        'PASSWORD': '1234',  # 你的数据库密码，安装mysql时设置的密码
+        'HOST': '43.138.76.134',  # 你的数据库主机，留空默认为localhost
+        'PORT': '3306',  # 你的数据库端口
     }
 }
 
@@ -105,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -117,9 +125,43 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MDEDITOR_CONFIGS = {
+'default':{
+    'width': '90%',  # 自定义编辑框宽度
+    'heigth': 500,   # 自定义编辑框高度
+    'toolbar': ["undo", "redo", "|",
+                "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|",
+                "h1", "h2", "h3", "h5", "h6", "|",
+                "list-ul", "list-ol", "hr", "|",
+                "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime",
+                "emoji", "html-entities", "pagebreak", "goto-line", "|",
+                "help", "info",
+                "||", "preview", "watch", "fullscreen"],  # 自定义编辑框工具栏
+    'upload_image_formats': ["jpg", "jpeg", "gif", "png", "bmp", "webp"],  # 图片上传格式类型
+    'image_folder': 'editor',  # 图片保存文件夹名称
+    'theme': 'default',  # 编辑框主题 ，dark / default
+    'preview_theme': 'default',  # 预览区域主题， dark / default
+    'editor_theme': 'default',  # edit区域主题，pastel-on-dark / default
+    'toolbar_autofixed': True,  # 工具栏是否吸顶
+    'search_replace': True,  # 是否开启查找替换
+    'emoji': True,  # 是否开启表情功能
+    'tex': True,  # 是否开启 tex 图表功能
+    'flow_chart': True,  # 是否开启流程图功能
+    'sequence': True,  # 是否开启序列图功能
+    'watch': True,  # 实时预览
+    'lineWrapping': True,  # 自动换行
+    'lineNumbers': False  # 行号
+    }
+}

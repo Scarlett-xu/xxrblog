@@ -1,0 +1,101 @@
+body {
+    /* padding: 0; */
+    /* background-color: #cfcfcf; */
+    /* background-image: url('https://predlncrna.oss-cn-shanghai.aliyuncs.com/45degreee_fabric.png'); */
+    /* background-color: #ded1bf0c; */
+    height: 100%;
+    /* font-family: Microsoft YaHei; */
+}
+
+#home-head {
+    background-image: url('http://43.138.76.134:8000/static/image/bizhi3.jpg');
+    /* background-size: 100% 100%; */
+}
+
+p::selection {
+    background-color: #cce5f3;
+}
+
+.tag {
+    padding: 5%;
+    color: #6c6a66;
+}
+
+#tag-body {
+    background-color: rgb(247, 246, 243);
+    /* border: solid rgba(166, 119, 58, 0.383); */
+    /* border-width: 2px 2px 2px 0; */
+}
+
+#article-tag {
+    color: #d28860;
+}
+
+#backtop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    /* background-color: #fff; */
+    z-index: 9;
+    cursor: pointer;
+
+}
+
+.norm-head {
+    background-image: url('http://43.138.76.134:8000/static/image/bizhi3.jpg')
+}
+
+#title {
+    color: #f0e4d3;
+    font: arial;
+    /* font-family: ; */
+}
+
+#article-body {
+    padding: 2% 5%;
+}
+
+.nav-link {
+    color: rgb(202, 217, 205);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+
+
+}
+
+.nav-item {
+    margin: 0 20px 0 20px;
+}
+
+.card {
+    border-style: none;
+}
+
+/* .card-body {
+    background-color: #ded1bf32;
+
+} */
+
+a,
+.card-title,
+.card-text {
+    text-decoration: none;
+    color: black;
+
+}
+
+.card-body:hover {
+    background-color: rgba(247, 246, 243);
+}
+
+.info {
+    color: rgb(98, 98, 98);
+}
+
+.passage-lists {
+    margin: 2%;
+    color: #c78b67;
+    line-height: 1.2;
+}

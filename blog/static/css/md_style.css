@@ -1,0 +1,51 @@
+.post-title,
+h1 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    margin: 2% 0;
+    padding: 1% 2%;
+    /* background-color: rgb(83, 105, 103); */
+    /* border: solid rgb(244, 162, 63); */
+    border-width: 0 0 0 5px;
+    /* color: white; */
+
+}
+
+h2 {
+    font-size: x-large;
+    margin: 2% 0;
+    padding: 1% 2%;
+    border: solid rgb(160, 160, 160);
+    border-width: 0 0 0 5px;
+}
+
+h3 {
+    font-size: large;
+    /* font-weight: bold; */
+}
+
+
+
+
+img {
+    width: 90%;
+    vertical-align: middle;
+}
+
+blockquote {
+    padding: 2% 2% 1% 2%;
+    background-color: rgb(244, 244, 243);
+    font-style: oblique;
+    color: rgb(79, 79, 78);
+}
+
+body {
+    font-family: Microsoft YaHei;
+    line-height: 1.8;
+}
+
+.codehilite {
+    font-family: monospace;
+    font-size: large;
+}
