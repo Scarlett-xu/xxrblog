@@ -4,11 +4,80 @@ body {
     /* background-image: url('https://predlncrna.oss-cn-shanghai.aliyuncs.com/45degreee_fabric.png'); */
     /* background-color: #ded1bf0c; */
     height: 100%;
-    /* font-family: Microsoft YaHei; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#try {
+    display: flex;
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    background-color: rgba(234, 220, 191, 0.491);
+}
+
+.passages {
+    margin: 2%;
+    border: 3px solid;
+    border-color: #c78b67;
+    width: 100%;
+    height: 90%;
+    /* background-color: plum; */
+    overflow: auto;
+}
+
+.passages::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+}
+
+.passages::-webkit-scrollbar-thumb {
+    width: 10px;
+    border-radius: 5px;
+    background-color: rgba(112, 112, 112, 0.445);
+}
+
+.passages::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+}
+
+.passages::-webkit-scrollbar-button {
+    background-color: rgb(62, 62, 62);
+}
+
+.passages::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(124, 124, 124, 0.632);
+}
+
+.btn {
+    border-radius: 6px;
+    /* background-color: ; */
+    font-size: larger;
+    border-color: #c78b67;
+    border-width: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.linktext:hover {
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #c78c675c;
+}
+
+#home-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url('https://xxrblog.oss-cn-nanjing.aliyuncs.com/Snipaste_2023-01-16_15-07-25.jpg'); */
+    background-color: rgba(234, 220, 191, 0.491);
 }
 
 #home-head {
-    background-image: url('http://43.138.76.134:8000/static/image/bizhi3.jpg');
+    /* background-image: url('https://xxrblog.oss-cn-nanjing.aliyuncs.com/Snipaste_2023-01-16_15-07-25.jpg'); */
+    background-color: rgba(234, 220, 191, 0.491);
     /* background-size: 100% 100%; */
 }
 
@@ -31,6 +100,18 @@ p::selection {
     color: #d28860;
 }
 
+#taglist {
+    background-color: rgba(234, 220, 191, 0.116);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-weight: bolder; */
+
+}
+
+#tagbox {
+    padding: 2% 0;
+
+}
+
 #backtop {
     display: none;
     position: fixed;
@@ -43,7 +124,7 @@ p::selection {
 }
 
 .norm-head {
-    background-image: url('http://43.138.76.134:8000/static/image/bizhi3.jpg')
+    background-image: url('https://xxrblog.oss-cn-nanjing.aliyuncs.com/bizhi3.jpg')
 }
 
 #title {
@@ -57,8 +138,8 @@ p::selection {
 }
 
 .nav-link {
-    color: rgb(202, 217, 205);
-    font-family: Arial, Helvetica, sans-serif;
+    color: #d28860;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     font-weight: bold;
 
@@ -71,12 +152,8 @@ p::selection {
 
 .card {
     border-style: none;
+
 }
-
-/* .card-body {
-    background-color: #ded1bf32;
-
-} */
 
 a,
 .card-title,
@@ -84,14 +161,26 @@ a,
     text-decoration: none;
     color: black;
 
+
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #453227;
+
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 .card-body:hover {
     background-color: rgba(247, 246, 243);
+    transition: all 0.3s;
 }
 
 .info {
-    color: rgb(98, 98, 98);
+    color: rgba(98, 98, 98, 0.765);
 }
 
 .passage-lists {

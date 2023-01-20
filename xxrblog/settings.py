@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'xxrblog',  # 你的数据库名称
         'USER': 'root',  # 你的数据库用户名
-        'PASSWORD': '1234',  # 你的数据库密码，安装mysql时设置的密码
+        'PASSWORD': 'HXCRgf4101#',  # 你的数据库密码，安装mysql时设置的密码
         'HOST': '43.138.76.134',  # 你的数据库主机，留空默认为localhost
         'PORT': '3306',  # 你的数据库端口
     }
@@ -151,6 +151,12 @@ MDEDITOR_CONFIGS = {
                 "||", "preview", "watch", "fullscreen"],  # 自定义编辑框工具栏
     'upload_image_formats': ["jpg", "jpeg", "gif", "png", "bmp", "webp"],  # 图片上传格式类型
     'image_folder': 'editor',  # 图片保存文件夹名称
+    # -----add----
+    # 'imageUploadURL':
+    # 'crossDomainUpload':True;
+    # 'uploadCallbackURL' : "http://xxxxxx/upload_callback.html?test=dfdf"
+
+    
     'theme': 'default',  # 编辑框主题 ，dark / default
     'preview_theme': 'default',  # 预览区域主题， dark / default
     'editor_theme': 'default',  # edit区域主题，pastel-on-dark / default

@@ -1,7 +1,8 @@
 from django.urls import path, include
-from blog.views import home,articles
+from blog.views import home,articles,homepage
 
 urlpatterns = [
-    path("", home, name="home"),
+    path("", homepage, name="homepage"),
+    path("home", home, name="home"),
     path('articles/<int:pid>', articles,name="articles")
 ]

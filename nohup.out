@@ -6,3 +6,11 @@ July 07, 2022 - 02:21:07
 Django version 3.2.14, using settings 'xxrblog.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2022 - 13:55:57
+Django version 3.2.14, using settings 'xxrblog.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.

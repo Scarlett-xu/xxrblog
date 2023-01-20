@@ -10,4 +10,5 @@ class Articles(models.Model):
     content = MDTextField()
     create_timestamp = models.DateTimeField(auto_now_add=True)
     # pic = models.ImageField(upload_to='media/') #封面图
-    surface_img = models.ImageField(upload_to="surface_img/", null=True, blank=True, verbose_name="文章封面图")
+    # surface_img = models.ImageField(upload_to="surface_img/", null=True, blank=True, verbose_name="文章封面图")
+    # surface_img = models.CharField(max_length=100)

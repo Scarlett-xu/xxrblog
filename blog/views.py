@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.http import FileResponse
 from blog.models import *
 import markdown
+def homepage(request):
+    return render(request, "homepage.html")
+
 def home(request):
     value = {}
     passages = Articles.objects.all()

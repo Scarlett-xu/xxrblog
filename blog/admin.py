@@ -5,7 +5,7 @@ from mdeditor.widgets import MDEditorWidget
 
 class ArticlesAdmin(admin.ModelAdmin):
     # 后台要显示的字段
-    list_display = ['viewcount','title','pid','describtion','tag','create_timestamp']
+    list_display = ['pid','viewcount','title','describtion','tag','create_timestamp']
     formfield_overrides = {
         models.TextField: {'widget': MDEditorWidget}
     }

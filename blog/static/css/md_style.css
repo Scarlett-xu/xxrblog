@@ -16,16 +16,17 @@ h2 {
     font-size: x-large;
     margin: 2% 0;
     padding: 1% 2%;
-    border: solid rgb(160, 160, 160);
+    border: solid #f7d069;
     border-width: 0 0 0 5px;
 }
 
 h3 {
+    margin: 2% 0;
+    padding: 1% 0;
     font-size: large;
+    background-color: #f7d1692c;
     /* font-weight: bold; */
 }
-
-
 
 
 img {
