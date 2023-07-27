@@ -9,20 +9,28 @@
     </div> -->
 
     <div class="row">
-        <div class="col-md-2" id="tag-body">
+        <div class="col-md-3" id="tag-body">
             <p class="tag">
                 <i class="fa fa-caret-right"></i>
-                &nbsp;
-                {{ passage.tag }}
+
+                {{ tag.tagcontext }}
             </p>
             <div>
                 <!-- <hr> -->
                 {% for i in passages %}
                 {% if i.pid == passage.pid %}
-                &nbsp;<a class="passage-lists" href="{{i.pid}}"><b>{{i.title}}</b></a><br>
+
+                <p class="passage-lists">
+                    <a id="pass-list" href="/article/?pid={{i.pid}}"><b>
+                            <i class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i>
+                            {{i.title}}</b></a>
+                </p>
+
 
                 {% else %}
-                &nbsp;<a class="passage-lists" href="{{i.pid}}">{{i.title}}</a><br>
+                <p class="passage-lists"><a id="pass-list" href="/article/?pid={{i.pid}}">
+                        <i class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i>
+                        {{i.title}}</a></p>
                 {% endif %}
                 {% endfor %}
                 <!-- <hr> -->
@@ -47,7 +55,8 @@
             </p>
 
         </div>
-        <div class="col-md-2" id="tag-body">
+        <div class="col-md-1" id="tag-body">
+
             <a onclick="byScrollTop()" id="backtop">
                 <div><img src="https://xxrblog.oss-cn-nanjing.aliyuncs.com/%E5%9B%9E%E9%A1%B6%E9%83%A8.png"
                         style="max-width:30%; height:auto;" class="img-responsive" alt="tothetop"></div>

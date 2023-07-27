@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blossomblog.cn ———— Blossom的博客</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="博客, blog">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="shortcut icon" href="{% static 'image/blossom.ico' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link href="/css/fontawesome.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="home-head">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <!-- <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4" style="text-align:center">
+                        <h1 id="title">牧 鱼 地</h1>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div> -->
+
+                <nav class="navbar navbar-expand-md">
+
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
+
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/articles/">Articles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" href="#">
+                                    <img id="logo" src="https://xxrblog.oss-cn-nanjing.aliyuncs.com/moon-ful.png"
+                                        class="img-responsive" alt="logo" style="width:20%">
+                                </a>
+                            </li>
+
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link nav-font" href="/tree">山</a>
+                            </li> -->
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="project-list">
+                <div class="project">
+                    <p id="proj-title"><a href="/projects/?proj=1/"><i class="fa fa-flask"
+                                aria-hidden="true" /></i>&nbsp;predlncRNA</p></a>
+                    <img src="https://xxrpict.oss-cn-shanghai.aliyuncs.com/img/202301201632006.png" alt="predlncrna">
+                    <p id="proj-desp">
+                        A web project for predict long-non-coding RNA.- See
+                        https://predlncRNA.com.
+                    </p>
+                    <p>website</p>
+                </div>
+                <div class="project">
+                    <p id="proj-title"><i class="fa fa-flask" aria-hidden="true" /></i>&nbsp;iseeDicom</p>
+                    <img src="https://xxrpict.oss-cn-shanghai.aliyuncs.com/img/202301201632006.png" alt="predlncrna">
+                    <p id="proj-desp">
+                        A simple application for
+                    </p>
+                    <p>website</p>
+                </div>
+
+            </div>
+
+
+            <!-- <div></div> -->
+        </div>
+    </div>
+
+
+</body>
+
+</html>

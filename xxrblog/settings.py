@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'xxrblog',  # 你的数据库名称
         'USER': 'root',  # 你的数据库用户名
         'PASSWORD': 'HXCRgf4101#',  # 你的数据库密码，安装mysql时设置的密码
-        'HOST': '43.138.76.134',  # 你的数据库主机，留空默认为localhost
+        'HOST': '111.231.44.120',  # 你的数据库主机，留空默认为localhost
         'PORT': '3306',  # 你的数据库端口
     }
 }

@@ -40,11 +40,15 @@
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" href="/">Home</a>
+                                <a class="nav-link active" href="/">🏡 Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="/home">Projects</a>
+                                <a class="nav-link active" href="/projects">🗃️ Projects</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/articles/?tid=0">📑 Passages</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="navbar-brand" href="#">
                                     <img id="logo" src="https://xxrblog.oss-cn-nanjing.aliyuncs.com/moon-ful.png"
@@ -64,59 +68,114 @@
 
         </div>
     </div>
+    <br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <hr>
+            <br>
+            <h2 id="subtitle">⌛ 杂七杂八的学习记录</h2>
+            <p id="subsubtitle">And if forever lasts till now Alright.</p>
 
+            <hr>
+        </div>
 
+    </div>
 
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
+            <p></p>
             <div id="taglist">
-                <p style="padding:4% 0">Tag box</p>
-                <div id="tagbox" style="    border-color: #c78b67;
-                border-width: 3px;">
-                    <p><i class="fa fa-tags"></i>&nbsp; DL</p>
-                    <p><i class="fa fa-tags"></i>&nbsp; Linux</p>
-                    <p><i class="fa fa-tags"></i>&nbsp; Deep learning for Computer Vision with Python</p>
+
+                <!-- <p style="padding:4% 0">Tag box</p> -->
+
+                <div id="tagbox">
+                    <div id="tagfont" style="padding:2%;">
+                        <a href="/articles/">
+                            <span id="tagfont">📂 全部分类</span>
+                        </a>
+                    </div>
+                    {% for tag in tags %}
+                    {% if tag.tagid == curr_tagid %}
+                    <div id="curr_tagfont" style="padding:2%;">
+                        🏷️ <a href="/articles/?tid={{ tag.tagid }}">
+                            <span id="curr_tagfont">{{ tag.tagcontext }}</span>
+                        </a>
+                    </div>
+                    {% else %}
+                    <div id="tagfont" style="padding:2%;">
+                        🏷️ <a href="/articles/?tid={{ tag.tagid }}">
+                            <span id="tagfont">{{ tag.tagcontext }}</span>
+                        </a>
+                    </div>
+                    {% endif %}
+
+
+                    <!-- <p><i class="fa fa-tags"></i>&nbsp; Linux</p>
+                    <p><i class="fa fa-tags"></i>&nbsp; Deep learning for Computer Vision with Python</p> -->
+                    {% endfor %}
                 </div>
 
             </div>
         </div>
         <div class="col-md-7">
             <div>
-                {% for i in passages %}
-                <div class="card">
-
-                    <div class="card-body">
-                        <!-- <div class="row"> -->
-                        <!-- <div class="col-md-2">
-                            <img src="{{ i.surface_img}}" style="max-width:100%; height:auto;" class="img-responsive"
-                                alt="lgc">
-                        </div> -->
-                        <!-- <div class="col-md-10"> -->
-                        <a href="
-                /articles/{{ i.pid }}">
-                            <h5 class="card-title">{{ i.title }}</h5>
-                        </a>
-                        <p class="card-text">{{ i.describtion }}</p>
-                        <p class="info" style="margin:0 ;">
-
-                            <span id="article-tag"><i class="fa fa-tags"></i>&nbsp;{{ i.tag }}</span>
-                            &nbsp;
-                            <i class="fa fa-eye"></i>&nbsp;{{ i.viewcount }}
-                            &nbsp;
-                            <i class="fa fa-clock-o"></i>&nbsp;{{ i.create_timestamp }}
-                        </p>
-                        <!-- </div>
-                    </div> -->
-
-                    </div>
-
+                <div>
+                    <h1></h1>
                 </div>
+                {% for i,j in page %}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img src="{{ i.Surface_img}}" style="max-width:100%; height:auto;"
+                                    class="img-responsive" alt="lgc">
+                            </div>
+                            <div class="col-sm-10">
+                                <a href="
+                            /article/?pid={{ i.pid }}">
+                                    <h5 class="card-title">{{ i.title }}</h5>
+                                </a>
+                                <p class="card-text">{{ i.describtion }}</p>
+                                <p class="info" style="margin:0 ;">
 
+                                    <span id="article-tag"><i class="fa fa-tags"></i>&nbsp;{{ j }}</span>
+                                    &nbsp;
+                                    <i class="fa fa-eye"></i>&nbsp;{{ i.viewcount }}
+                                    &nbsp;
+                                    <i class="fa fa-clock-o"></i>&nbsp;{{ i.create_timestamp }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
 
+            <div>
+                <p style="text-align: center;">
+                    {% if page.number == 1 %}
+                    <span class="currentpage"> &lt;&lt; 1</span>
+                    <a class="otherpage" href="/articles/?page=2">2</a>
+                    <a class="otherpage" href="/articles/?page=3">3 &gt;&gt; </a>
+                    {% elif page.number == 2 %}
+                    <a class="otherpage" href="/articles/?page=1"> &lt;&lt; 1</a>
+                    <span class="currentpage">2</span>
+                    <a class="otherpage" href="/articles/?page=3">3 &gt;&gt;</a>
+                    {% else %}
+                    <a class="otherpage" href="/articles/?page=1"> &lt;&lt; 1</a>
+                    <a class="otherpage" href="/articles/?page=2">2</a>
+                    <span class="currentpage">3 &gt;&gt; </span>
+                </p>
 
+
+
+                {% endif %}
+
+
+
+            </div>
             <!-- <div></div> -->
         </div>
     </div>

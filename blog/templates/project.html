@@ -1,0 +1,39 @@
+{% load static %}
+
+<body>
+    {% include 'head.html' %}
+    <div class="row">
+        <div class="col-md-2" id="tag-body">
+        </div>
+        <div class="col-md-8" id="article-body">
+            <h1 class="post-title">{{ proj.title }}</h1>
+            <p class="info" style="margin:0 ;text-align: center;">
+
+                <!-- <span id="article-tag"><i class="fa fa-tags"></i>&nbsp;{{ passage.tag }}</span> -->
+                <!-- &nbsp; -->
+                <i class="fa fa-eye"></i>&nbsp;Views: {{ proj.viewcount }}
+                &nbsp;
+                <i class="fa fa-clock-o"></i>&nbsp;Created time: {{ proj.create_timestamp }}
+            </p>
+            <hr>
+            <p class="article-content">
+                {{ html|safe }}
+            </p>
+        </div>
+        <div class="col-md-1" id="tag-body">
+
+            <a onclick="byScrollTop()" id="backtop">
+                <div><img src="https://xxrblog.oss-cn-nanjing.aliyuncs.com/%E5%9B%9E%E9%A1%B6%E9%83%A8.png"
+                        style="max-width:30%; height:auto;" class="img-responsive" alt="tothetop"></div>
+            </a>
+        </div>
+    </div>
+    <!-- {% endblock %} -->
+
+
+
+</body>
+
+<script type=" text/javascript" src="{% static 'js/web.js' %}"></script>
+
+</html>
